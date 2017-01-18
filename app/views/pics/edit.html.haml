@@ -2,6 +2,11 @@
     .row
         .panel.panel-default
             .panel-heading
-                %h1 Edit pic
+                %h1 Edit picture
             .panel-body
+                .current-image
+                    %strong.center
+                        Your picture:
+                    %br
+                    = image_tag @pic.image.url(:medium)
                 = render 'form'          
